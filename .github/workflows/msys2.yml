@@ -9,9 +9,6 @@ on: [push, pull_request]
 jobs:
   msys2-mingw64:
     runs-on: windows-2025
-    defaults:
-      run:
-        shell: msys2 {0}
     steps:
       - name: Gather Facts
         id: facts
@@ -64,6 +61,7 @@ jobs:
           Move-Item -Path ".\temp" -Destination "$path"
 
       - name: CI-Build
+        shell: msys2 {0}
         id: build
         run: |
           echo 'Running in MSYS2!'
