@@ -18,7 +18,7 @@ jobs:
         with:
           msystem: MINGW64
           update: true
-          install: git mingw-w64-mingw64-x86_64-gcc
+          install: git mingw-w64-x86_64-gcc
       - name: CI-Build
         id: build
         run: |
