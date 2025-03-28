@@ -8,7 +8,7 @@ on: [push, pull_request]
 
 jobs:
   msys2-mingw64:
-    runs-on: windows-latest
+    runs-on: windows-2025
     defaults:
       run:
         shell: msys2 {0}
@@ -94,4 +94,3 @@ jobs:
           msys2 -c 'mv -f /etc/pacman.conf.bak /etc/pacman.conf'
           msys2 -c 'pacman --noconfirm -Suuy'
           msys2 -c 'pacman --noconfirm -Suu'
-          
